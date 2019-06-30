@@ -1,0 +1,19 @@
+{
+  "name": "ghost-bootstrap",
+  "version": "1.0.0",
+  "description": "A simple bootstrap starter theme for ghost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/initialapps/ghost-bootstrap.git"
+  },
+  "author": "Andrew Akagawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/initialapps/ghost-bootstrap/issues"
+  },
+  "homepage": "https://github.com/initialapps/ghost-bootstrap#readme"
+}
