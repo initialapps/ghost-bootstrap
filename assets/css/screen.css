@@ -1,3 +1,110 @@
+/* Table of Contents
+/* ------------------------------------------------------------
+
+This is a development CSS file which will be built to a minified
+production stylesheet in assets/build.css along with vendor scripts
+
+1.  Global Styles
+2.  Layout
+3.  Special Templates
+4.  Site Header
+5.  Site Navigation
+6.  Post Feed
+7.  Single Post
+  7.1. Subscribe Form
+  7.2. Post Footer
+     7.2.1 Single Author Byline
+     7.2.2 Multiple Author Byline
+  7.3. Comments
+  7.4. Related Posts
+  7.5. Floating Header
+  7.6. Koenig Styles
+8.  Author Template
+9.  Error Template
+10. Subscribe Overlay
+11. Site Footer
+
+*/
+
+
+/* 5. Site Navigation
+/* ---------------------------------------------------------- */
+
+.navbar-brand img {
+    display: block;
+    width: auto;
+    height: 36px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+}
+
+.social-link svg {
+    height: 1.8rem;
+    fill: #fff;
+}
+
+.social-link-fb svg {
+    height: 1.5rem;
+}
+
+.social-link-wb svg {
+    height: 1.6rem;
+}
+
+.social-link-wb svg path {
+    stroke: #fff;
+}
+
+.social-link-rss svg {
+    height: 1.9rem;
+}
+
+.subscribe-button {
+    display: block;
+    padding: 4px 10px;
+    border: #fff 1px solid;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1em;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.subscribe-button:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.rss-button {
+    opacity: 0.8;
+}
+
+.rss-button:hover {
+    opacity: 1;
+}
+
+.rss-button svg {
+    margin-bottom: 1px;
+    height: 2.1rem;
+    fill: #fff;
+}
+
+
+/* 7.6. Koenig Styles
+/* ---------------------------------------------------------- */
+
 .post-full-content .kg-width-wide .kg-image {
     max-width: 1040px;
 }

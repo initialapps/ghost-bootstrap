@@ -1,0 +1,7 @@
+<ul class="navbar-nav mr-auto">
+    <!-- Loop through the navigation items -->
+    {{#foreach navigation}}
+    <li class="nav-item nav-{{slug}}{{#if current}} active nav-current{{/if}}"><a class="nav-link" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+    <!-- End the loop -->
+</ul>
