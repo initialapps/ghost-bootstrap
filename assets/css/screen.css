@@ -233,6 +233,16 @@ a:hover {
     object-fit: cover;
 }
 
+/* 7.2.1 Single Author Byline
+/* ---------------------------------------------------------- */
+
+.author-card .author-profile-image,
+.author-card .avatar-wrapper {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+}
+
 /* 7.6. Koenig Styles
 /* ---------------------------------------------------------- */
 
@@ -275,6 +285,68 @@ a:hover {
     justify-content: center;
 }
 
+
+/* 8. Author Template
+/* ---------------------------------------------------------- */
+
+.site-header-content .author-profile-image {
+    z-index: 10;
+    flex-shrink: 0;
+    margin: 0 0 20px 0;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+}
+
+.site-header-content .author-bio {
+    z-index: 10;
+    flex-shrink: 0;
+    margin: 5px 0 10px 0;
+    max-width: 600px;
+    font-size: 2rem;
+    line-height: 1.3em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.site-header-content .author-meta {
+    z-index: 10;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.site-header-content .author-location svg {
+    height: 1.9rem;
+    stroke: #fff;
+}
+
+.site-header-content .bull {
+    display: inline-block;
+    margin: 0 12px;
+    opacity: 0.5;
+}
+
+.site-header-content .social-link:first-of-type {
+    padding-left: 4px;
+}
+
+@media (max-width: 500px) {
+    .site-header-content .author-bio {
+        font-size: 1.8rem;
+        line-height: 1.15em;
+        letter-spacing: 0;
+    }
+    .author-location,
+    .author-stats {
+        display: none;
+    }
+}
 
 
 /* 11. Site Footer
