@@ -23,7 +23,7 @@ gulp.task('css', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',      
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
         'node_modules/fitvids/dist/fitvids.min.js',
         'node_modules/wowjs/dist/wow.min.js'
       ])
