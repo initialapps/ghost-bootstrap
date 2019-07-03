@@ -25,7 +25,8 @@ gulp.task('scripts', function() {
         'node_modules/jquery/dist/jquery.min.js',      
         'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
         'node_modules/fitvids/dist/fitvids.min.js',
-        'node_modules/wowjs/dist/wow.min.js'
+        'node_modules/wowjs/dist/wow.min.js',
+        'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
       ])
       .pipe(concat('build.js'))
       .pipe(gulp.dest(DEST+'/js'))

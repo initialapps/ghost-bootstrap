@@ -90,36 +90,42 @@ into the {body} of the default.hbs template --}}
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
+            <div class="card-deck">
             {{#if primary_tag}}
             {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
                 {{#if related_posts}}
-                <article class="read-next-card"
-                    {{#if ../primary_tag.feature_image}}
-                        style="background-image: url({{img_url ../primary_tag.feature_image size="m"}})"
-                    {{else}}
-                        {{#if @site.cover_image}}
-                            style="background-image: url({{img_url @site.cover_image size="m"}})"{{/if}}
-                    {{/if}}
-                >
-                    <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">&mdash; {{@site.title}} &mdash;</small>
-                        {{#../primary_tag}}
-                        <h3 class="read-next-card-header-title"><a href="{{url}}">{{name}}</a></h3>
-                        {{/../primary_tag}}
-                    </header>
-                    <div class="read-next-divider">{{> "icons/infinity"}}</div>
-                    <div class="read-next-card-content">
-                        <ul>
+                    <div class="card my-5 bg-dark text-white text-center">
+                        <img class="card-img" src="
+                            {{#if ../primary_tag.feature_image}}
+                                {{img_url ../primary_tag.feature_image size="m"}}
+                            {{else}}
+                                {{#if @site.cover_image}}
+                                    {{img_url @site.cover_image size="m"}}
+                                {{/if}}
+                            {{/if}}
+                        ">
+                        <div class="card-img-overlay">
+                            <small>&mdash; {{@site.title}} &mdash;</small>
+                            {{#../primary_tag}}
+                            <h3><a href="{{url}}">{{name}}</a></h3>
+                            {{/../primary_tag}}
+                            <div><i class="fas fa-infinity"></i></div>                            
                             {{#foreach related_posts}}
-                            <li><a href="{{url}}">{{title}}</a></li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a href="{{url}}">{{title}}</a>
+                                    </div>
+                                </div>
                             {{/foreach}}
-                        </ul>
+                            
+
+                            <footer class="read-next-card-footer">
+                                <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
+                            </footer>
+                        </div>
                     </div>
-                    <footer class="read-next-card-footer">
-                        <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a>
-                    </footer>
-                </article>
-                {{/if}}
+                
+            {{/if}}
             {{/get}}
             {{/if}}
 
@@ -132,7 +138,7 @@ into the {body} of the default.hbs template --}}
             {{#prev_post}}
                 {{> "post-card"}}
             {{/prev_post}}
-
+            </div>
         </div>
     </div>
 </aside>

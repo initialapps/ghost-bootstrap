@@ -32,6 +32,10 @@ a:hover {
     text-decoration: none;
 }
 
+.text-white a {
+    color:#FFFFFF;
+}
+
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -351,7 +355,3 @@ a:hover {
 
 /* 11. Site Footer
 /* ---------------------------------------------------------- */
-
-footer.text-white a {
-    color: inherit;
-}
