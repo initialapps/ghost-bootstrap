@@ -11,46 +11,44 @@ It's a good idea to keep this template as minimal as possible in terms of both f
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    {{!-- Vendor Scripts by Gulp --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/build.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 </head>
 <body class="error-template">
-    <div class="site-wrapper">
+    <nav class="navbar navbar-dark bg-dark p-3">
+        {{#if @site.logo}}
+            <a class="navbar-brand" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" /></a>
+        {{else}}
+            <a class="navbar-brand" href="{{@site.url}}">{{@site.title}}</a>
+        {{/if}}
+    </nav>
+    <main id="site-main" class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <section class="error-message">
+                <h1 class="display-4">{{code}}</h1>
+                <p class="lead">{{message}}</p>
+                <a href="{{@site.url}}">Go to the front page →</a>
+            </section>
+        </div>
+    </main>
 
-        <header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-image{{/if}}">
-            <div class="inner">
-                <nav class="site-nav-center">
-                    {{#if @site.logo}}
-                        <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                        <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
-                </nav>
+    {{#get "posts" limit="3"}}
+    <section id="site-main">
+        <div class="container">
+            <div class="card-deck">
+                {{#foreach posts}}
+                    {{> "post-card"}}
+                {{/foreach}}
             </div>
-        </header>
-
-        <main id="site-main" class="site-main outer">
-            <div class="inner">
-
-                <section class="error-message">
-                    <h1 class="error-code">{{code}}</h1>
-                    <p class="error-description">{{message}}</p>
-                    <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
-                </section>
-            </div>
-        </main>
-
-        {{#get "posts" limit="3"}}
-        <aside class="outer">
-            <div class="inner">
-                <div class="post-feed">
-                    {{#foreach posts}}
-                        {{> "post-card"}}
-                    {{/foreach}}
-                </div>
-            </div>
-        </aside>
-        {{/get}}
-
+        </div>
     </div>
+    {{/get}}
+
+    {{!-- vendor scripts via gulp --}}
+    <script type="text/javascript" src="{{asset "js/build.js"}}"></script>
+    {{!-- site custom scripts --}}
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+
 </body>
 </html>
