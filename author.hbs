@@ -6,43 +6,56 @@
 
 
 {{> header background=cover_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
-    <div class="inner">
+    <div id="author-page" class="container pb-4">
         {{> "site-nav"}}
-        <div class="site-header-content">
             {{#if profile_image}}
-                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-            {{/if}}
-            <h1 class="site-title">{{name}}</h1>
-            {{#if bio}}
-                <h2 class="author-bio">{{bio}}</h2>
-            {{/if}}
-            <div class="author-meta">
-                {{#if location}}
-                    <div class="author-location">{{location}} <span class="bull">&bull;</span></div>
-                {{/if}}
-                <div class="author-stats">
-                    {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} <span class="bull">&bull;</span>
+            <div class="row py-5">
+                <div class="col">
+                   <img class="author-profile-image mx-auto" src="{{profile_image}}" alt="{{name}}" />
                 </div>
-                {{#if website}}
-                    <a class="social-link social-link-wb" href="{{website}}" target="_blank" rel="noopener"><i class="fas fa-globe"></i></a>
-                {{/if}}
-                {{#if twitter}}
-                    <a class="social-link social-link-tw" href="{{twitter_url}}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                {{/if}}
-                {{#if facebook}}
-                    <a class="social-link social-link-fb" href="{{facebook_url}}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                {{/if}}
-                <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
             </div>
+            {{/if}}
+            <div class="row text-center">
+                <div class="col">
+                    <h1 class="site-title">{{name}}</h1>
+                </div>                
+            </div>
+            {{#if bio}}
+            <div class="row text-center">
+                <div class="col">
+                    <h2 class="author-bio">{{bio}}</h2>
+                </div>
+            </div>
+            {{/if}}
+            <div class="row pb-5 text-center">
+                <div class="col">
+                    {{#if location}}
+                        <span class="author-location">{{location}} <span class="bull">&bull;</span></span>
+                    {{/if}}
+                    <span class="author-stats">
+                        {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} <span class="bull">&bull;</span>
+                    </span>
+                    {{#if website}}
+                        <a href="{{website}}" target="_blank" rel="noopener"><i class="fas fa-fw fa-globe"></i></a>
+                    {{/if}}
+                    {{#if twitter}}
+                        <a href="{{twitter_url}}" target="_blank" rel="noopener"><i class="fab fa-fw fa-twitter"></i></a>
+                    {{/if}}
+                    {{#if facebook}}
+                        <a href="{{facebook_url}}" target="_blank" rel="noopener"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    {{/if}}
+                    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener"><i class="fas fa-fw fa-rss"></i></a>
+                </div>                
+            </div>
+
         </div>
     </div>
 </header>
 {{/author}}
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner">
-
+<main id="site-main">
+    <div class="container">
         <div class="post-feed">
             {{#foreach posts}}
 
@@ -51,6 +64,5 @@
 
             {{/foreach}}
         </div>
-
     </div>
 </main>

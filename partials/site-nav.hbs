@@ -16,21 +16,21 @@
         <ul class="navbar-nav">
             {{#if @site.facebook}}
                 <li class="nav-item">
-                    <a class="nav-link social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a class="nav-link" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                 </li>
             {{/if}}
             {{#if @site.twitter}}
                 <li class="nav-item">
-                    <a class="nav-link social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a class="nav-link" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
                 </li>
             {{/if}}
             {{#if @labs.subscribers}}
                 <li class="nav-item">
-                    <a class="nav-link subscribe-button" href="#subscribe">Subscribe</a>
+                    <a class="nav-link" href="#subscribe">Subscribe</a>
                 </li>
             {{else}}
                 <li class="nav-item">
-                    <a class="nav-link rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
+                    <a class="nav-link" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
                 </li>
             {{/if}}
         </ul>
