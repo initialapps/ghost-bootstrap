@@ -10,15 +10,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Install [npm](https://nodejs.org).
+* Install [npm](https://nodejs.org).
 
-Install [Ghost Local](https://docs.ghost.org/install/local/).
+* Install [Ghost Local](https://docs.ghost.org/install/local/).
 
-Navigate to the ghost local link provided in the terminal, and follow the setup instructions.
+* Navigate to the ghost local link provided in the terminal, and follow the setup instructions.
 
 Or, simply download the zip file directly from github and upload directly to ghost.  This is not really recommended for development, but should still work.  
 
 ### Installing
+
+#### Setting up the theme
 
 From the directory that you've installed ghost local, move into the themes folder:
 
@@ -39,6 +41,7 @@ ghost restart
 ```
 Finally, navigate to the ghost local link provided in the terminal.  When logged into ghost, click **Settings > Design**.  Scroll to the bottom and activate the **ghost-bootstrap** theme.
 
+#### Setting up your routes
 This theme supports a home page, and separate blog page.  In order to do this in ghost, you must upload a custom **routes.yml** file.  You can download your current file, when logged into ghost local, by clicking **Settings > Design** in the left sidebar and scrolling to **Routes** at the bottom.
 
 You should edit this file to look like this:
@@ -62,9 +65,9 @@ Once complete, upload back to your ghost local blog by clicking the upload butto
 
 
 ### Developing
-You can add to the theme css by editing the css theme file at **assets>css>screen.css**
+* You can add to the theme css by editing the css theme file at **assets>css>screen.css**
 
-You can add to the theme js by editing the js theme file at **assets>css>screen.css** 
+* You can add to the theme js by editing the js theme file at **assets>css>screen.css** 
 
 ## Deployment
 
