@@ -16,12 +16,12 @@
         <ul class="navbar-nav">
             {{#if @site.facebook}}
                 <li class="nav-item">
-                    <a class="nav-link social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                    <a class="nav-link social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                 </li>
             {{/if}}
             {{#if @site.twitter}}
                 <li class="nav-item">
-                    <a class="nav-link social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                    <a class="nav-link social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
                 </li>
             {{/if}}
             {{#if @labs.subscribers}}
@@ -30,7 +30,7 @@
                 </li>
             {{else}}
                 <li class="nav-item">
-                    <a class="nav-link rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                    <a class="nav-link rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a>
                 </li>
             {{/if}}
         </ul>

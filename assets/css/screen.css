@@ -202,8 +202,39 @@ a:hover {
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
 
+.post-full-image img {
+    width: 100%;
+    height: 800px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 .post-card-tags, .card-title, .post-card-excerpt {
     color: #212529;
+}
+
+.post-full-content>p:first-child {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0 0 1.5em;
+    font-weight: bold;
+}
+
+.post-full-content blockquote {
+    margin: 0 0 1.5em;
+    padding: 0 1.5em;
+    border-left: 3px solid #3eb0ef;
+}
+
+.post-full-content pre {
+    overflow-x: auto;
+    margin: 1.5em 0 3em;
+    padding: 20px;
+    max-width: 100%;
+    border: 1px solid #000;
+    color: #e5eff5;
+    background: #0e0f11;
+    border-radius: 5px;
 }
 
 .static-avatar {
@@ -236,19 +267,33 @@ a:hover {
     height: 60px;
 }
 
+/* 7.4. Related posts
+/* ---------------------------------------------------------- */
+
+.read-next-card {
+    background: var(--darkgrey) center center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+}
+
 /* 7.6. Koenig Styles
 /* ---------------------------------------------------------- */
 
-.post-full-content .kg-width-wide .kg-image {
+.kg-width-wide .kg-image {
     max-width: 1040px;
 }
 
-.post-full-content .kg-width-full .kg-image {
+.kg-width-full .kg-image {
     max-width: 100vw;
 }
 
+.kg-image {
+    max-width: 100%;
+}
+
 @media (max-width: 1040px) {
-    .post-full-content .kg-width-full .kg-image {
+    .kg-width-full .kg-image {
         width: 100vw;
     }
 }
@@ -276,16 +321,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-/* 7.4. Related posts
-/* ---------------------------------------------------------- */
-
-.read-next-card {
-    background: var(--darkgrey) center center;
-    background-size: cover;
-    background-position: center;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 }
 
 

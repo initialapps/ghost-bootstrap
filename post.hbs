@@ -12,18 +12,20 @@ into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<main id="site-main" class="container">
-    <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+<main id="site-main">
+    <article class="{{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-        <header class="post-full-header">
-            <section class="post-full-meta">
-                <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-                {{#primary_tag}}
-                    <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
-                {{/primary_tag}}
-            </section>
-            <h1 class="post-full-title">{{title}}</h1>
-        </header>
+        <div class="container text-center py-4">
+            <div class="row">
+                <div class="col-sm">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                    {{#primary_tag}}
+                        <span>/</span> <a href="{{url}}">{{name}}</a>
+                    {{/primary_tag}}
+                    <h1>{{title}}</h1>
+                </div>
+            </div>
+        </div>
 
         {{#if feature_image}}
         <figure class="post-full-image">
@@ -43,8 +45,8 @@ into the {body} of the default.hbs template --}}
         </figure>
         {{/if}}
 
-        <section class="post-full-content">
-            <div class="post-content">
+        <section class="container m-5">
+            <div class="post-full-content">
                 {{content}}
             </div>
         </section>
@@ -59,17 +61,20 @@ into the {body} of the default.hbs template --}}
         {{/if}}
 
         <footer class="post-full-footer">
+            <div class="container">
 
-            {{!-- There are two options for how we display the byline/author-info.
-            If the post has more than one author, we load a specific template
-            from includes/byline-multiple.hbs, otherwise, we just use the
-            default byline. --}}
+                {{!-- There are two options for how we display the byline/author-info.
+                If the post has more than one author, we load a specific template
+                from includes/byline-multiple.hbs, otherwise, we just use the
+                default byline. --}}
 
-            {{#has author="count:>1"}}
-                {{> "byline-multiple"}}
-            {{else}}
-                {{> "byline-single"}}
-            {{/has}}
+                {{#has author="count:>1"}}
+                    {{> "byline-multiple"}}
+                {{else}}
+                    {{> "byline-single"}}
+                {{/has}}
+
+            </div>
 
         </footer>
 
@@ -97,22 +102,22 @@ into the {body} of the default.hbs template --}}
                             style="background-image: url({{img_url @site.cover_image size="m"}})"{{/if}}
                     {{/if}}
                 >
-                    <div class="card-body p-5">
-                        <p class="m-3">&mdash; {{@site.title}} &mdash;</p>
+                    <div class="card-body p-3">
+                        <p class="my-2">&mdash; {{@site.title}} &mdash;</p>
                         {{#../primary_tag}}
-                        <h1 class="card-title"><a href="{{url}}">{{name}}</a></h1>
+                        <h2 class="card-title"><a href="{{url}}">{{name}}</a></h2>
                         {{/../primary_tag}}
-                        <div class="m-5"><i class="fas fa-infinity fa-5x"></i></div>                            
+                        <div class="my-5"><i class="fas fa-infinity fa-5x"></i></div>                            
                         {{#foreach related_posts}}
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h4 class="m-3"><a href="{{url}}">{{title}}</a></h4>
+                                    <p class="my-1"><a href="{{url}}">{{title}}</a></p>
                                 </div>
                             </div>
                         {{/foreach}}
                     </div>
                     <div class="card-footer">
-                        <h5 class="m-3"><a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a></h5>
+                        <p class="my-3"><a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}} →</a></p>
                     </div>                        
                 </div>
             
@@ -131,10 +136,6 @@ into the {body} of the default.hbs template --}}
         {{/prev_post}}
     </div>
 </div>
-
-
-{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
-{{> floating-header}}
 
 {{/post}}
 
