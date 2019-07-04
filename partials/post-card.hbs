@@ -24,15 +24,18 @@
         <div class="row">
             <div class="col">
                 <ul class="author-list">
-            {{#foreach authors}}
-                {{#if profile_image}}
-                    <li class="author-list-item"><a href="{{url}}" class="card-link static-avatar" data-toggle="tooltip" title="{{name}}">
-                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                    </a></li>
-                {{else}}
-                    <li class="author-list-item"><a href="{{url}}" class="card-link static-avatar author-profile-image">{{> "icons/avatar"}}</a></li>
-                {{/if}}
-            {{/foreach}}</ul>
+                    {{#foreach authors}}
+                        {{#if profile_image}}
+                            <li class="author-list-item"><a href="{{url}}" class="card-link static-avatar" data-toggle="tooltip" title="{{name}}">
+                                <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                            </a></li>
+                        {{else}}
+                            <li class="author-list-item">
+                                <a href="{{url}}" class="card-link static-avatar static-avatar-wrapper bg-dark text-light"><i class="fas fa-user"></i></a>
+                            </li>
+                        {{/if}}
+                    {{/foreach}}
+                </ul>
             </div>
             <div class="col text-right pt-1 pr-3">
                 <span class="text-muted">{{reading_time}}</span>

@@ -12,7 +12,9 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    {{!-- Vendor Scripts by Gulp --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/build.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 </head>
 <body class="error-template">
     <nav class="navbar navbar-dark bg-dark p-3">
@@ -23,31 +25,34 @@ You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in 
         {{/if}}
     </nav>
 
-        <main id="site-main" class="jumbotron jumbotron-fluid">
-            <div class="container text-center">
+    <main id="site-main" class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
 
-                <h1 class="display-4">{{code}}</h1>
-                <p class="lead">{{message}}</p>
-                <a href="{{@site.url}}">Go to the front page →</a>
-                
-                {{#if errorDetails}}
-                <section class="error-stack container">
-                    <h3>Theme errors</h3>
-                    {{#foreach errorDetails}}
-                        <div class="alert alert-warning" role="alert">
-                            <em>{{{rule}}}</em>
+            <h1 class="display-4">{{code}}</h1>
+            <p class="lead">{{message}}</p>
+            <a href="{{@site.url}}">Go to the front page →</a>
+            
+            {{#if errorDetails}}
+            <section class="error-stack container">
+                <h3>Theme errors</h3>
+                {{#foreach errorDetails}}
+                    <div class="alert alert-warning" role="alert">
+                        <em>{{{rule}}}</em>
 
-                            {{#foreach failures}}
-                                <p>Ref: {{ref}}</p>
-                                <p>Message: {{message}}</p>
-                            {{/foreach}}
-                        </div>
-                    {{/foreach}}
-                </section>
-                {{/if}}
+                        {{#foreach failures}}
+                            <p>Ref: {{ref}}</p>
+                            <p>Message: {{message}}</p>
+                        {{/foreach}}
+                    </div>
+                {{/foreach}}
+            </section>
+            {{/if}}
 
-            </div>
-        </main>
-
+        </div>
+    </main>
+    {{!-- vendor scripts via gulp --}}
+    <script type="text/javascript" src="{{asset "js/build.js"}}"></script>
+    {{!-- site custom scripts --}}
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 </body>
 </html>

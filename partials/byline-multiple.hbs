@@ -14,7 +14,7 @@
                 {{#if profile_image}}
                     <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
                 {{else}}
-                    <div class="author-profile-image">{{> "icons/avatar"}}</div>
+                <span class="author-profile-image avatar-wrapper bg-dark text-light"><i class="fas fa-2x fa-user"></i></span>
                 {{/if}}
                 <h2>{{name}}</h2>
                  {{#if bio}}

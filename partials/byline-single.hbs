@@ -7,7 +7,7 @@
             {{#if profile_image}}
                 <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
             {{else}}
-                <span class="author-profile-image">{{> "icons/avatar"}}</span>
+                <span class="author-profile-image avatar-wrapper bg-dark text-light"><i class="fas fa-2x fa-user"></i></span>
             {{/if}}
              <div class="media-body">
                 <h5 class="mt-0"><a href="{{url}}">{{name}}</a></h5>

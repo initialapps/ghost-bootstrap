@@ -6,7 +6,7 @@
 
 
 {{> header background=cover_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
-    <div id="author-page" class="container pb-4">
+    <div id="author-page" class="container pb-4 text-white">
         {{> "site-nav"}}
             {{#if profile_image}}
             <div class="row py-5">
@@ -17,13 +17,13 @@
             {{/if}}
             <div class="row text-center">
                 <div class="col">
-                    <h1 class="site-title">{{name}}</h1>
+                    <h1>{{name}}</h1>
                 </div>                
             </div>
             {{#if bio}}
             <div class="row text-center">
                 <div class="col">
-                    <h2 class="author-bio">{{bio}}</h2>
+                    <h2 class="lead">{{bio}}</h2>
                 </div>
             </div>
             {{/if}}

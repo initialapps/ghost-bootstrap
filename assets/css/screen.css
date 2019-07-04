@@ -1,28 +1,18 @@
 /* Table of Contents
 /* ------------------------------------------------------------
 
-This is a development CSS file which will be built to a minified
-production stylesheet in assets/build.css along with vendor scripts
+This is a minimalized development CSS file based from the casper
+theme in conjunction bootstrap v4.  
 
 1.  Global Styles
-2.  Layout
-3.  Special Templates
-4.  Site Header
-5.  Site Navigation
-6.  Post Feed
-7.  Single Post
-  7.1. Subscribe Form
-  7.2. Post Footer
-     7.2.1 Single Author Byline
-     7.2.2 Multiple Author Byline
-  7.3. Comments
-  7.4. Related Posts
-  7.5. Floating Header
-  7.6. Koenig Styles
+2.  Site Header
+3.  Site Navigation
+4.  Post Feed
+5.  Single Author Byline
+6.  Related Posts
+7.  Koenig Styles
 8.  Author Template
-9.  Error Template
-10. Subscribe Overlay
-11. Site Footer
+
 
 */
 
@@ -36,7 +26,7 @@ a:hover {
     color:#FFFFFF;
 }
 
-/* 4. Site Header
+/* 3. Site Header
 /* ---------------------------------------------------------- */
 
 .site-header {
@@ -78,37 +68,8 @@ a:hover {
     display: none;
 }
 
-.site-header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10vw 4vw;
-    min-height: 200px;
-    max-height: 450px;
-    text-align: center;
-}
-
-.site-title {
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-    font-size: 3.8rem;
-    font-weight: 700;
-}
-
 .site-logo {
     max-height: 45px;
-}
-
-.site-description {
-    z-index: 10;
-    margin: 0;
-    padding: 5px 0;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    opacity: 0.8;
 }
 
 @media (max-width: 500px) {
@@ -121,7 +82,7 @@ a:hover {
 }
 
 
-/* 5. Site Navigation
+/* 3. Site Navigation
 /* ---------------------------------------------------------- */
 
 .navbar {
@@ -134,7 +95,7 @@ a:hover {
     height: 36px;
 }
 
-/* 6. Post Feed
+/* 4. Post Feed
 /* ---------------------------------------------------------- */
 
 .post-full-image img {
@@ -229,6 +190,11 @@ a:hover {
     border-radius: 100%;
 }
 
+.static-avatar-wrapper {
+    padding: 4px;
+    text-align: center;
+}
+
 .author-profile-image {
     display: block;
     width: 100%;
@@ -238,17 +204,20 @@ a:hover {
     object-fit: cover;
 }
 
-/* 7.2.1 Single Author Byline
+/* 5. Single Author Byline
 /* ---------------------------------------------------------- */
 
-.author-card .author-profile-image,
-.author-card .avatar-wrapper {
+.author-card .author-profile-image {
     margin-right: 15px;
     width: 60px;
     height: 60px;
 }
 
-/* 7.4. Related posts
+.author-card .avatar-wrapper {
+    padding: 14px 16px;
+}
+
+/* 6. Related posts
 /* ---------------------------------------------------------- */
 
 .read-next-card {
@@ -258,7 +227,7 @@ a:hover {
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 }
 
-/* 7.6. Koenig Styles
+/* 7. Koenig Styles
 /* ---------------------------------------------------------- */
 
 .kg-width-wide .kg-image {
@@ -316,19 +285,3 @@ a:hover {
     height: 100px;
     box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
 }
-
-@media (max-width: 500px) {
-    #author-page .author-bio {
-        font-size: 1.8rem;
-        line-height: 1.15em;
-        letter-spacing: 0;
-    }
-    .author-location,
-    .author-stats {
-        display: none;
-    }
-}
-
-
-/* 11. Site Footer
-/* ---------------------------------------------------------- */
