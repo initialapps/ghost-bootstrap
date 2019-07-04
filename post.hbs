@@ -51,10 +51,12 @@ into the {body} of the default.hbs template --}}
 
         {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.subscribers}}
-        <section class="subscribe-form">
-            <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-            <p>Get the latest posts delivered right to your inbox</p>
-            {{subscribe_form placeholder="youremail@example.com"}}
+        <section class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Subscribe to {{@site.title}}</h1>
+                <p class="lead">Get the latest posts delivered right to your inbox</p>
+                {{subscribe_form placeholder="youremail@example.com"}}
+            </div>
         </section>
         {{/if}}
 
