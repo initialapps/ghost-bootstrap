@@ -19,17 +19,13 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner">
-
+<main id="site-main">
+    <div class="container">
         <div class="post-feed">
             {{#foreach posts}}
-
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-
             {{/foreach}}
         </div>
-
     </div>
 </main>
