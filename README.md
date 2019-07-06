@@ -2,7 +2,7 @@
 
 A simple and minimal bootstrap starter theme for ghost.  
 
-This is meant to be a simple starter theme for anyone to customize using bootstrap.
+This is meant to be a simple starter theme for anyone to customize using bootstrap.  [You can demo the theme here](https://ghost-bootstrap.initialapps.com/).
 
 ## Getting Started
 
