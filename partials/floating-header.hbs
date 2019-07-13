@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light fixed-top d-none shadow" id="floating-header">
+    <a class="navbar-brand" href="{{@site.url}}">
+        {{#if @site.icon}}
+            <img src="{{img_url @site.icon size="xxs"}}" alt="{{@site.title}} icon" />
+        {{/if}}
+        <b>{{@site.title}}</b>
+    </a>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="" class="nav-link d-none d-sm-block">{{title}}</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link">Share this <i class="fas fa-fw fa-hand-point-right"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+    </ul>
+</nav>

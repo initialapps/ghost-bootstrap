@@ -10,8 +10,7 @@ const DEST = 'assets/';
 gulp.task('css', function() {
     return gulp.src([
         'node_modules/bootstrap/dist/css/bootstrap.min.css',
-        'node_modules/bootstrap/dist/css/bootstrap.min.css.map',       
-        'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+        'node_modules/bootstrap/dist/css/bootstrap.min.css.map',
         'node_modules/animate.css/animate.min.css'
       ])
       .pipe(concat('build.css'))
@@ -24,9 +23,10 @@ gulp.task('scripts', function() {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',      
         'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-        'node_modules/fitvids/dist/fitvids.min.js',
+        'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
         'node_modules/wowjs/dist/wow.min.js',
-        'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
+        'node_modules/jquery.easing/jquery.easing.min.js',
+        'assets/js/jquery.fitvids.js'
       ])
       .pipe(concat('build.js'))
       .pipe(gulp.dest(DEST+'/js'))
