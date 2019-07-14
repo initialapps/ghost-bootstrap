@@ -69,18 +69,18 @@
     <div id="subscribe" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-secondary">
+                <div class="modal-body p-4">
                     {{#if @site.logo}}
                         <img class="mx-auto" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    {{else}}
+                        <span class="navbar-brand">{{@site.title}}</span>
                     {{/if}}
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body p-4">
                     <h1>Subscribe to {{@site.title}}</h1>
                     <p>Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                    {{subscribe_form placeholder="youremail@example.com"}}
+                    {{subscribe_form input_class="form-control" button_class="btn btn-primary btn-lg my-2" placeholder="youremail@example.com"}}
                 </div>
             </div>
         </div>
