@@ -1,6 +1,6 @@
 {
   "name": "ghost-bootstrap",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple bootstrap starter theme for ghost",
   "engines": {
     "ghost-api": "v2"
