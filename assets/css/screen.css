@@ -41,7 +41,13 @@ a:hover {
     color:#FFFFFF;
 }
 
-/* 3. Site Header
+p, blockquote, dl, ol, ul {
+    margin-bottom: 3rem;
+    display: flow-root;
+}
+
+
+/* 2. Site Header
 /* ---------------------------------------------------------- */
 
 .site-header {
