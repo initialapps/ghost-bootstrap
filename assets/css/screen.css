@@ -45,6 +45,17 @@ p, blockquote, dl, ol, ul {
     display: flow-root;
 }
 
+.card-img-top {
+    border-radius: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-feed .card-img-top {
+    height: 40vh;
+}
+
 
 /* 2. Site Header
 /* ---------------------------------------------------------- */
