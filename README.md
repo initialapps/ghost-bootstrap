@@ -67,7 +67,7 @@ Once complete, upload back to your ghost local blog by clicking the upload butto
 ### Developing
 * You can add to the theme css by editing the css theme file at **assets>css>screen.css**
 
-* You can add to the theme js by editing the js theme file at **assets>css>screen.css** 
+* You can add to the theme js by editing the js theme file at **assets>js>main.js** 
 
 ## Deployment
 
