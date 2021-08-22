@@ -1,3 +1,6 @@
+| :warning: **Note**: This theme worked for older versions of ghost, but is no longer supported for the current release |
+| --- |
+
 # ghost-bootstrap
 
 A simple and minimal bootstrap starter theme for ghost.  
