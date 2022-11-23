@@ -27,7 +27,7 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "fitvids": "^2.0.0",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1",
